@@ -1,0 +1,12 @@
+# Script que recebe como parâmetro o nome de uma pasta e usa "ls -lh" + "cut" para informar tamanho do arquivo.
+#!/bin/bash
+read -p "Digite o nome do arquivo: " x
+if test -d "$x"
+then
+echo "O arquivo $x existe e seu uso de memória está listado abaixo:" && cd $x &&  ls -lh | cut -d ' ' -f5
+else
+echo “Arquivo $x inexistente”
+fi
+echo "****************************************
+😎 Obrigado por utilizar nossos serviços! 😃
+****************************************"

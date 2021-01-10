@@ -1,0 +1,13 @@
+# Script recebe como parâmetro dois números e verifica qual é o maior.
+#!/bin/bash
+read -p "Digite um numero: " a
+read -p "Digite outro número: " b
+    if [ $a -gt $b ]
+    then
+        echo " O número $a é maior que o número $b"
+    elif [ $a -lt $b ]
+    then
+        echo "O número $a é menor que o número $b"
+    else
+        echo "Número $a é igual ao número $b"
+fi    

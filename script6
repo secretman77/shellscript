@@ -1,0 +1,13 @@
+#Script que lê três números, armazena-os em três variáveis (usando o comando read) e escreve na tela a soma e a subtração dele
+#!/bin/bash
+echo “Digite o primeiro número:”
+read num
+echo "O primeiro número é $num"
+echo “Digite o segundo número:”
+read num2
+echo "O segundo número é $num2"
+echo “Digite o terceiro número:”
+read num3
+echo "O terceiro número é $num3"
+echo “ A soma destes números é $((num+num2+num3))”
+echo “ A subtração destes números é $((num-num2-num3))”

@@ -1,0 +1,19 @@
+#Script que recebe 12 números por parâmetro e em seguida escreve na tela quais são eles. Como são apenas 9 os parâmetros mapeados ($1 até $9) foi usado o comando shift 3 para deslocar os três valores restantes.
+#!/bin/bash
+echo “o nome do programa passado no parâmetro 0 é: “ $0
+echo “o parâmetro 1 recebeu o valor: “ $1
+echo “o parâmetro 2 recebeu o valor: “ $2
+echo “o parâmetro 3 recebeu o valor: “ $3
+echo “o parâmetro 4 recebeu o valor: “ $4
+echo “o parâmetro 5 recebeu o valor: “ $5
+echo “o parâmetro 6 recebeu o valor: “ $6
+echo “o parâmetro 7 recebeu o valor: “ $7
+echo “o parâmetro 8 recebeu o valor: “ $8
+echo “o parâmetro 9 recebeu o valor: “ $9
+x=$1 y=$2 z=$3
+shift 3
+echo “o parâmetro 10 recebeu o valor: “ $7
+echo “o parâmetro 11 recebeu o valor: “ $8
+echo “o parâmetro 12 recebeu o valor: “ $9
+echo “o total de parâmetros recebidos é: “ $(($#+3))
+echo “lista de todos os parâmetros recebidos: “ $x $y $z $@

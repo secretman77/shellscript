@@ -1,0 +1,12 @@
+# Script que recebe como parâmetro o nome de uma pasta e verifica se a mesma existe e quais arquivos ela possui.
+#!/bin/bash
+read -p "Digite o nome do arquivo: " x
+if test -d "$x"
+then
+echo "A pasta $x existe e contém os arquivos listados abaixo:" && cd $x && ls
+else
+echo “Arquivo $x inexistente”
+fi
+echo "****************************************
+😎 Obrigado por utilizar nossos serviços! 😃
+****************************************"

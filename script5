@@ -1,0 +1,17 @@
+# Script que auxilia na criação de arquivos.
+#!/bin/bash
+read -p "Digite o nome do arquivo: " x
+if test -e "$x"
+then
+echo "O arquivo $x já existe e não pode ser criado! 😥"
+else
+touch $x && chmod +x $x
+echo "Arquivo $x foi criado! Deseja edita-lo agora (s/n)? 😃 "
+read resposta
+test “$resposta” = “n” && exit
+pluma $x
+fi
+echo "****************************************
+😎 Obrigado por utilizar nossos serviços! 😎
+****************************************"
+exit

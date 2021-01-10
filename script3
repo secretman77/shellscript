@@ -1,0 +1,19 @@
+#  Script que verifica se recebeu nome de uma pasta como parâmetro e depois  verifica se a pasta existe e quais arquivos ela possui.
+#!/bin/bash
+read -p "Digite o nome do arquivo: " x
+test -n "$x" # -n testa se parâmetro x está vazio
+if [ "$?" == "0" ]
+then
+echo "Parâmetro contendo nome do arquivo foi recebido!!!"
+else
+echo "Parâmetro contendo nome do arquivo não foi recebido!!!"
+fi
+if test -d "$x"
+then
+echo "O arquivo $x existe e contém os arquivos listados abaixo:" && cd $x && ls
+else
+echo “Arquivo $x inexistente”
+fi
+echo "****************************************
+😎 Obrigado por utilizar nossos serviços! 😃
+****************************************"
